@@ -1,0 +1,24 @@
+{
+  "name": "markdown-to-html",
+  "version": "0.0.1",
+  "description": "markdown to html",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "markdown"
+  ],
+  "author": "cr",
+  "license": "ISC",
+  "dependencies": {
+    "co": "^4.6.0",
+    "co-fs": "^1.2.0",
+    "jquery": "^3.1.1",
+    "jsdom": "^9.5.0",
+    "markdown-more": "^0.8.7",
+    "open": "0.0.5",
+    "showdown": "^1.4.3",
+    "thunkify": "^2.1.2"
+  }
+}
