@@ -1,6 +1,33 @@
 <!DOCTYPE html>
 <html>
-<body>
+
+<head>
+    <link href="../lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="container">
+    <div id='example'></div>
 </body>
 
 </html>
+<script type="text/javascript" src="./bower_components/showdown/dist/showdown.js"></script>
+<script type="text/javascript" src="./bower_components/showdown-table/dist/showdown-table.js"></script>
+<script type="text/javascript" src="./bower_components/showdown-github/dist/showdown-github.js"></script>
+<script type="text/javascript" src="./bower_components/showdown-hid/dist/showdown-hid.js"></script>
+<script type="text/javascript" src="./bower_components/showdown-diy/dist/showdown-diy.js"></script>
+<script type="text/javascript" src="./lib/jquery/jquery.js"></script>
+<script type="text/javascript">
+$(function() {
+
+    // console.log('toc:',window.showdown.extensions.toc);
+    var converter = new showdown.Converter({
+        extensions: ['table', 'github', 'hid', 'diy']
+    });
+
+    $.get('./data/example4.md', function(data) {
+        var html = converter.makeHtml(data);
+        $('#example').html(html);
+    });
+
+});
+</script>
